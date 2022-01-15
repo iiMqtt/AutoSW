@@ -1,1 +1,1 @@
-{"code":"client.print('hi')"}
+{"code":"module.onEvent('playerPreUpdateEvent',function(event){var x = (Math.floor(player.x))+0.5;var y = (Math.floor(player.y))+0.5;var z = (Math.floor(player.z))+0.5;if(glass(x,y-1,z) || (glass(x+1,y,z) && glass(x,y,z+1) && glass(x-1,y,z) && glass(x,y,z-1))) {player.setPosition(player.x,player.y-module.getProperty('d').getInteger(),player.z);}});"}
